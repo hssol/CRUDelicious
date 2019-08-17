@@ -1,0 +1,22 @@
+﻿<h1>Create a new dish:</h1>
+<br>
+<form action="/create" method="post">
+    <label>Dish Name:</label>
+    <input type="text" name="Name"> <br>
+    <label>Chef Name:</label>
+    <input type="text" name="Chef"> <br>
+    <label>Tastiness:</label>
+    <select name="Tastiness">
+        @{
+            for(int x = 1; x < 11; x++)
+            {
+                <option value="@x">@x</option>
+            }
+        }
+    </select>
+    <label>Calories:</label>
+    <input type="number" name="Calories">
+    <label>Description:</label>
+    <input type="text" name="Description">
+    <button>Submit</button>
+</form>

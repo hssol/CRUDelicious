@@ -1,0 +1,29 @@
+@using CRUDelicious.Models
+@model Dish
+
+<h1>@Model.Name</h1>
+<p>Chef: @Model.Chef</p>
+<p>Tastiness: @Model.Tastiness</p>
+<p>Calories: @Model.Calories</p>
+<p>Description: @Model.Description</p>
+
+<form action="/edit/@Model.DishId" method="post">
+    <label>Dish Name:</label>
+    <input type="text" name="Name"> <br>
+    <label>Chef Name:</label>
+    <input type="text" name="Chef"> <br>
+    <label>Tastiness:</label>
+    <select name="Tastiness">
+        @{
+            for(int x = 1; x < 11; x++)
+            {
+                <option value="{x}">@x</option>
+            }
+        }
+    </select>
+    <label>Calories:</label>
+    <input type="number" name="Calories">
+    <label>Description:</label>
+    <input type="text" name="Description">
+    <button>Submit</button>
+</form>

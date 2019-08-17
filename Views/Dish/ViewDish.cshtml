@@ -1,0 +1,12 @@
+@using CRUDelicious.Models
+@model Dish
+
+<h1>@Model.Name</h1>
+<p>Chef: @Model.Chef</p>
+<p>Tastiness: @Model.Tastiness</p>
+<p>Calories: @Model.Calories</p>
+<p>Description: @Model.Description</p>
+
+<a href="delete/@Model.DishId">Delete</a> <br>
+<a href="editdish/@Model.DishId">Edit</a> <br>
+<a href="createdish">Create a new dish</a> <br>
